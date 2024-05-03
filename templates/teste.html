@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos/teste.css') }}">
+    <title>Exemplo Flask</title>
+</head>
+<body>
+    <h1 class="titulo">Olá, {{ nome }}!</h1>
+    <p>Você tem {{ idade }} anos.</p>
+    
+    <h2>Sua lista de compras:</h2>
+    <ul>
+        {% for item in lista_de_compras %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <p>Projeto de investimentos</p>
+    <button><a href="{{ url_for('outra_pagina') }}">Conferir investimentos</a></button>
+</body>
+</html>
